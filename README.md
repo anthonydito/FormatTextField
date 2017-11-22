@@ -18,6 +18,21 @@ it, simply add the following line to your Podfile:
 pod 'FormatTextField'
 ```
 
+## Usage
+
+```swift
+import FormatTextField
+
+var textField = FormatTextField()
+textField.inputType = .phone
+```
+
+The options for inputType are the following
+
+- phone: Formats a phone number, for example (123) 456-7890
+- currecy: Formats as a currency with a given currency symbol, for example $1,234
+- email: Validates as an email
+
 ## Author
 
 Anthony Dito, anthonymdito@gmail.com
