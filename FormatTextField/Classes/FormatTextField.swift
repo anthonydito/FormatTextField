@@ -9,7 +9,7 @@ import UIKit
 
 public class FormatTextField: UITextField {
     
-    public var inputType: FormatTextField.InputType = .none
+    public var inputType: FormatTextField.InputType = .phone
     
     override public init(frame: CGRect) {
         super.init(frame: frame)

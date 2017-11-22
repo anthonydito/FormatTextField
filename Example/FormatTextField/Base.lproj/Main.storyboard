@@ -23,10 +23,9 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HxU-Iy-56E">
-                                <rect key="frame" x="38" y="28" width="299" height="29"/>
+                                <rect key="frame" x="46" y="28" width="283" height="29"/>
                                 <segments>
-                                    <segment title="$###"/>
-                                    <segment title="$##.##"/>
+                                    <segment title="Currency"/>
                                     <segment title="Email"/>
                                     <segment title="Phone"/>
                                     <segment title="None"/>
@@ -35,7 +34,7 @@
                                     <action selector="segmentValueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="0j3-1k-pQ6"/>
                                 </connections>
                             </segmentedControl>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iaa-qZ-3lg" customClass="FormatTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iaa-qZ-3lg" customClass="FormatTextField" customModule="FormatTextField">
                                 <rect key="frame" x="75" y="64" width="225" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>

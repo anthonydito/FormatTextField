@@ -27,14 +27,12 @@ class ViewController: UIViewController {
     private func getInputTypeForSegment() -> FormatTextField.InputType {
         switch segmentControl.selectedSegmentIndex {
         case 0:
-            return .currency(currencySymbol: "$", allowsDecimal: false)
+            return .currency(currencySymbol: "$")
         case 1:
-            return .currency(currencySymbol: "$", allowsDecimal: true)
-        case 2:
             return .email
-        case 3:
+        case 2:
             return .phone
-        case 4:
+        case 3:
             return .none
         default:
             fatalError("Unknown segment control index \(segmentControl.selectedSegmentIndex)")
