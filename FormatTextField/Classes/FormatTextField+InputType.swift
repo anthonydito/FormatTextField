@@ -35,7 +35,22 @@ extension FormatTextField {
             case .email:
                 return text
             case .phone:
-                return text
+                var tempText = ""
+                for (idx, char) in text.enumerated() {
+                    switch idx {
+                    case 0:
+                        tempText.append("(\(char)")
+                    case 1, 3, 4, 6, 7, 8, 9:
+                        tempText.append(char)
+                    case 2:
+                        tempText.append("\(char)) ")
+                    case 5:
+                        tempText.append("\(char)-")
+                    default:
+                        break
+                    }
+                }
+                return tempText
             case .currency(currencySymbol: let currencySymbol):
                 guard let num = Double(text) else { return "" }
                 let nf = NumberFormatter()
