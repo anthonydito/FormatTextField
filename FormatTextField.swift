@@ -22,6 +22,7 @@ public class FormatTextField: UITextField {
     }
     
     private func commonInit() {
+        self.delegate = self
     }
 }
 
