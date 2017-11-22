@@ -11,10 +11,22 @@ public class FormatTextField: UITextField {
     
     public final var formatTextFieldDelegate: FormatTextFieldDelegate?
     
-    public final var inputType: FormatTextField.InputType = .phone {
+    public final var inputType: FormatTextField.InputType = .none {
         didSet {
             updateTextForInputTypeChange()
         }
+    }
+    
+    public var formattedText: String {
+        return text ?? ""
+    }
+    
+    public var clensedText: String {
+        return inputType.clense(text: text ?? "")
+    }
+    
+    public var isValid: Bool {
+        return inputType.isValid(clensedText: clensedText)
     }
     
     override public init(frame: CGRect) {
@@ -41,6 +53,7 @@ public class FormatTextField: UITextField {
 
 extension FormatTextField: UITextFieldDelegate {
     
+    /// :nodoc:
     public func textFieldShouldClear(_ textField: UITextField) -> Bool {
         let formatted = inputType.format(text: "")
         text = formatted
@@ -48,6 +61,7 @@ extension FormatTextField: UITextFieldDelegate {
         return true
     }
     
+    /// :nodoc:
     public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let nextText = NSString(string: textField.text!).replacingCharacters(in: range, with: string)
         let lengthDiff = nextText.count - text!.count

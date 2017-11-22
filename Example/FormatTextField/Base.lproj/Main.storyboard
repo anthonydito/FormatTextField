@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -40,18 +41,28 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afy-X1-ULb">
+                                <rect key="frame" x="24" y="102" width="326.5" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Iaa-qZ-3lg" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="DeY-az-gvL"/>
+                            <constraint firstItem="afy-X1-ULb" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="DrZ-zL-JbY"/>
+                            <constraint firstItem="afy-X1-ULb" firstAttribute="top" secondItem="Iaa-qZ-3lg" secondAttribute="bottom" constant="8" id="Gry-DV-V4o"/>
                             <constraint firstItem="Iaa-qZ-3lg" firstAttribute="top" secondItem="HxU-Iy-56E" secondAttribute="bottom" constant="8" id="NEg-1J-Qfd"/>
                             <constraint firstItem="HxU-Iy-56E" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="Q2N-B4-7H7"/>
                             <constraint firstItem="HxU-Iy-56E" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="lEa-HH-iHp"/>
                             <constraint firstItem="Iaa-qZ-3lg" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" multiplier="0.6" id="lmC-ul-WUm"/>
+                            <constraint firstItem="afy-X1-ULb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="8" id="mg3-nA-NnY"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="formatTextField" destination="Iaa-qZ-3lg" id="PzC-Mi-QZb"/>
+                        <outlet property="infoLabel" destination="afy-X1-ULb" id="Wr6-Ss-N3r"/>
                         <outlet property="segmentControl" destination="HxU-Iy-56E" id="1OS-e6-oUP"/>
                     </connections>
                 </viewController>

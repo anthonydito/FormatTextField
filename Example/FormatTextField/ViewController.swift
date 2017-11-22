@@ -23,6 +23,8 @@ class ViewController: UIViewController {
         formatTextField.inputType = getInputTypeForSegment()
     }
     
+    @IBOutlet weak var infoLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         formatTextField.inputType = getInputTypeForSegment()
@@ -46,6 +48,6 @@ class ViewController: UIViewController {
 
 extension ViewController: FormatTextFieldDelegate {
     func formatTextFieldTextChange(_ textField: FormatTextField, text: String, isValid: Bool) {
-        print("\(isValid ? "✅" : "❌") Text changed to \(text) which \(isValid ? "is" : "is not") valid")
+        infoLabel.text = "\(isValid ? "✅" : "❌") Text changed to '\(text)' which \(isValid ? "is" : "is not") valid"
     }
 }
