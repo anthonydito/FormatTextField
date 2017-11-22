@@ -1,5 +1,8 @@
 use_frameworks!
 
+install! 'cocoapods',
+:share_schemes_for_development_pods => false
+
 target 'FormatTextField_Example' do
   pod 'FormatTextField', :path => '../'
 
