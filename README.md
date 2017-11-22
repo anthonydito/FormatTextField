@@ -1,6 +1,6 @@
 # FormatTextField
 
-[![CI Status](http://img.shields.io/travis/Anthony Dito/FormatTextField.svg?style=flat)](https://travis-ci.org/Anthony Dito/FormatTextField)
+[![CI Status](http://img.shields.io/travis/anthonydito/FormatTextField.svg?style=flat)](https://travis-ci.org/anthonydito/FormatTextField)
 [![Version](https://img.shields.io/cocoapods/v/FormatTextField.svg?style=flat)](http://cocoapods.org/pods/FormatTextField)
 [![License](https://img.shields.io/cocoapods/l/FormatTextField.svg?style=flat)](http://cocoapods.org/pods/FormatTextField)
 [![Platform](https://img.shields.io/cocoapods/p/FormatTextField.svg?style=flat)](http://cocoapods.org/pods/FormatTextField)
