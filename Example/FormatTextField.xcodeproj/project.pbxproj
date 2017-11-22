@@ -30,7 +30,7 @@
 /* Begin PBXFileReference section */
 		164E47C811AF12C08FD54ADF /* Pods-FormatTextField_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormatTextField_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FormatTextField_Tests/Pods-FormatTextField_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		16716524671D407FA0823A2F /* Pods-FormatTextField_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormatTextField_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FormatTextField_Example/Pods-FormatTextField_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		521E7EE8378EA9F0E99B2AD1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		521E7EE8378EA9F0E99B2AD1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* FormatTextField_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FormatTextField_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,8 +42,8 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		63A985BC677FB7B4B24B162C /* Pods-FormatTextField_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormatTextField_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FormatTextField_Tests/Pods-FormatTextField_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		9BEFC905B60F76FA6A4B064D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		B014E5C58149799FB2512C68 /* FormatTextField.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = FormatTextField.podspec; path = ../FormatTextField.podspec; sourceTree = "<group>"; };
+		9BEFC905B60F76FA6A4B064D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		B014E5C58149799FB2512C68 /* FormatTextField.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FormatTextField.podspec; path = ../FormatTextField.podspec; sourceTree = "<group>"; };
 		B47D4B12D10D88E0786B8034 /* Pods_FormatTextField_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FormatTextField_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A7006A4D4271D465D72DAB /* Pods_FormatTextField_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FormatTextField_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDFD0D525076E5BECA3050F3 /* Pods-FormatTextField_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormatTextField_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-FormatTextField_Example/Pods-FormatTextField_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -215,10 +215,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 6N79AU6QFN;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 6N79AU6QFN;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -520,6 +522,7 @@
 			baseConfigurationReference = 16716524671D407FA0823A2F /* Pods-FormatTextField_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6N79AU6QFN;
 				INFOPLIST_FILE = FormatTextField/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -535,6 +538,7 @@
 			baseConfigurationReference = DDFD0D525076E5BECA3050F3 /* Pods-FormatTextField_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6N79AU6QFN;
 				INFOPLIST_FILE = FormatTextField/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -549,6 +553,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 164E47C811AF12C08FD54ADF /* Pods-FormatTextField_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 6N79AU6QFN;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -570,6 +575,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 63A985BC677FB7B4B24B162C /* Pods-FormatTextField_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 6N79AU6QFN;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
