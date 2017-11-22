@@ -9,8 +9,6 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
-
 ## Installation
 
 FormatTextField is available through [CocoaPods](http://cocoapods.org). To install
@@ -22,7 +20,7 @@ pod 'FormatTextField'
 
 ## Author
 
-Anthony Dito, anthony.dito@walla.by
+Anthony Dito, anthonymdito@gmail.com
 
 ## License
 

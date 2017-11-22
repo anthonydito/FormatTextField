@@ -24,7 +24,7 @@ TODO: Add long description of the pod here. This description will have to be a l
   s.homepage         = 'https://github.com/anthonydito/FormatTextField'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Anthony Dito' => 'anthony.dito@walla.by' }
+  s.author           = { 'Anthony Dito' => 'anthonymdito@gmail.com' }
   s.source           = { :git => 'https://github.com/anthonydito/FormatTextField.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
