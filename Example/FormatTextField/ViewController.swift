@@ -13,7 +13,11 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var segmentControl: UISegmentedControl!
     
-    @IBOutlet weak var formatTextField: FormatTextField!
+    @IBOutlet weak var formatTextField: FormatTextField! {
+        didSet {
+            formatTextField.formatTextFieldDelegate = self
+        }
+    }
     
     @IBAction func segmentValueChanged(_ sender: Any) {
         formatTextField.inputType = getInputTypeForSegment()
@@ -37,5 +41,11 @@ class ViewController: UIViewController {
         default:
             fatalError("Unknown segment control index \(segmentControl.selectedSegmentIndex)")
         }
+    }
+}
+
+extension ViewController: FormatTextFieldDelegate {
+    func formatTextFieldTextChange(_ textField: FormatTextField, text: String, isValid: Bool) {
+        print("\(isValid ? "✅" : "❌") Text changed to \(text) which \(isValid ? "is" : "is not") valid")
     }
 }

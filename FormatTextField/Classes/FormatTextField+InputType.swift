@@ -22,7 +22,11 @@ extension FormatTextField {
             case .email:
                 return text
             case .phone:
-                return text.removeOccurances(notInSet: self.set)
+                var currText = text.removeOccurances(notInSet: self.set)
+                if currText.count > 10 {
+                    currText = String(currText.prefix(10))
+                }
+                return currText
             case .currency(currencySymbol: _):
                 return text.removeOccurances(notInSet: self.set)
             }
@@ -58,6 +62,26 @@ extension FormatTextField {
                 nf.currencySymbol = currencySymbol
                 nf.maximumFractionDigits = 0
                 return nf.string(from: num as NSNumber)!
+            }
+        }
+        
+        func isValid(clensedText text: String) -> Bool {
+            return regexPredicate?.evaluate(with: text) ?? true
+        }
+        
+        var regexPredicate: NSPredicate? {
+            switch self {
+            case .none:
+                return nil
+            case .email:
+                let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+                return NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+            case .phone:
+                let phoneRegEx = "[0-9]{10}"
+                return NSPredicate(format:"SELF MATCHES %@", phoneRegEx)
+            case .currency(currencySymbol: _):
+                let currencyRegEx = "[0-9]+"
+                return NSPredicate(format:"SELF MATCHES %@", currencyRegEx)
             }
         }
         

@@ -9,7 +9,9 @@ import UIKit
 
 public class FormatTextField: UITextField {
     
-    public var inputType: FormatTextField.InputType = .phone {
+    public final var formatTextFieldDelegate: FormatTextFieldDelegate?
+    
+    public final var inputType: FormatTextField.InputType = .phone {
         didSet {
             updateTextForInputTypeChange()
         }
@@ -26,17 +28,25 @@ public class FormatTextField: UITextField {
     }
     
     private func commonInit() {
-        self.delegate = self
+        delegate = self
     }
     
     private func updateTextForInputTypeChange() {
         let values = inputType.clense(text: text!)
         let formatted = inputType.format(text: values)
         text = formatted
+        formatTextFieldDelegate?.formatTextFieldTextChange(self, text: values, isValid: inputType.isValid(clensedText: values))
     }
 }
 
 extension FormatTextField: UITextFieldDelegate {
+    
+    public func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        let formatted = inputType.format(text: "")
+        text = formatted
+        formatTextFieldDelegate?.formatTextFieldTextChange(self, text: formatted, isValid: inputType.isValid(clensedText: ""))
+        return true
+    }
     
     public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let nextText = NSString(string: textField.text!).replacingCharacters(in: range, with: string)
@@ -48,6 +58,7 @@ extension FormatTextField: UITextFieldDelegate {
         }
         let formatted = inputType.format(text: rawValues)
         text = formatted
+        formatTextFieldDelegate?.formatTextFieldTextChange(self, text: rawValues, isValid: inputType.isValid(clensedText: rawValues))
         return false
     }
 }
