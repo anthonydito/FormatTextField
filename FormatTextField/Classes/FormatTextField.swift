@@ -17,7 +17,7 @@ import UIKit
  `UITextFieldDelegate` protocol instead).
  
 */
-public class FormatTextField: UITextField {
+open class FormatTextField: UITextField {
     
     /// The delegate that will recieve events relating to this FormatTextField.
     public final var formatTextFieldDelegate: FormatTextFieldDelegate?
