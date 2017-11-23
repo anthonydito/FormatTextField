@@ -33,6 +33,10 @@ The options for inputType are the following
 - currecy: Formats as a currency with a given currency symbol, for example $1,234
 - email: Validates as an email
 
+## Demo
+
+![alt text](assets/demo.gif)
+
 ## Author
 
 Anthony Dito, anthonymdito@gmail.com
