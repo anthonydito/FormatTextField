@@ -9,8 +9,6 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
-
 ## Installation
 
 FormatTextField is available through [CocoaPods](http://cocoapods.org). To install
@@ -20,9 +18,28 @@ it, simply add the following line to your Podfile:
 pod 'FormatTextField'
 ```
 
+## Usage
+
+```swift
+import FormatTextField
+
+var textField = FormatTextField()
+textField.inputType = .phone
+```
+
+The options for inputType are the following
+
+- phone: Formats a phone number, for example (123) 456-7890
+- currecy: Formats as a currency with a given currency symbol, for example $1,234
+- email: Validates as an email
+
+## Demo
+
+![alt text](assets/demo.gif)
+
 ## Author
 
-Anthony Dito, anthony.dito@walla.by
+Anthony Dito, anthonymdito@gmail.com
 
 ## License
 

@@ -9,22 +9,18 @@
 Pod::Spec.new do |s|
   s.name             = 'FormatTextField'
   s.version          = '0.1.0'
-  s.summary          = 'A convenience class for UITextField that formats the input.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.summary          = 'A convenience class for UITextField that formats and validates input.'
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here. This description will have to be a little longer to make sure that I talk about all the different options available.
+FormatTextField is a UITextField subclass that formats and validates the input
+for the input of a given user. The available options are no format, formatting
+as a phone number, formatting currency, and validating email.
                        DESC
 
   s.homepage         = 'https://github.com/anthonydito/FormatTextField'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Anthony Dito' => 'anthony.dito@walla.by' }
+  s.author           = { 'Anthony Dito' => 'anthonymdito@gmail.com' }
   s.source           = { :git => 'https://github.com/anthonydito/FormatTextField.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
