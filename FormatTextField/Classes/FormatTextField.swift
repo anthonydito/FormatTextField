@@ -64,6 +64,21 @@ open class FormatTextField: UITextField {
         delegate = self
     }
     
+    /**
+     
+     Sets the text in the text field. Text passed through will be clensed and
+     formatted.
+     
+     - Parameter text: The text to be put into the text field.
+     
+     */
+    public final func set(text t: String) {
+        let clensed = inputType.clense(text: t)
+        let formatted = inputType.format(text: clensed)
+        text = formatted
+        formatTextFieldDelegate?.formatTextFieldTextChange(self, text: clensed, isValid: inputType.isValid(clensedText: clensed))
+    }
+    
     private func updateTextForInputTypeChange() {
         let values = inputType.clense(text: text!)
         let formatted = inputType.format(text: values)

@@ -28,6 +28,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         formatTextField.inputType = getInputTypeForSegment()
+        formatTextField.set(text: "3423asdfa")
     }
     
     private func getInputTypeForSegment() -> FormatTextField.InputType {
